@@ -47,6 +47,7 @@ nav {
     display: none;
 }
 
+/* nav btn */
 .nav-part2 button {
     font-size: 1.2vw;
     letter-spacing: 0.02vw;
@@ -60,18 +61,19 @@ nav {
 
 /* //////////////////////////////////////////////////////////////////////////////// */
 
-/* CONTENT */
+/* content-1 hero section */
 
 .content {
-    height: 620px;
+    height: 540px;
     width: 100%;
     display: flex;
 }
 
+/* left side of hero section */
 .left {
     width: 55%;
     height: 100%;
-    padding: 3vw 8vw;
+    padding: 3vw 6.8vw;
 }
 
 .left h1 {
@@ -100,8 +102,9 @@ nav {
     font-weight: 300px;
 }
 
+/* right side of hero section */
 .right {
-    padding: 2.5vw 4vw;
+    padding: 2.5vw 4.8vw;
     width: 45%;
     height: 100%;
 }
@@ -113,13 +116,13 @@ nav {
 }
 
 
-/* content 2////////////////////////////////////////////////////////////////////////////////// */
+/* content 2 company's logo////////////////////////////////////////////////////////////////////////////////// */
 
 .content-2 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 50px;
 }
 
 .logos {
@@ -135,8 +138,7 @@ nav {
     height: 3vw;
 }
 
-
-/* ////////////////////////////////////////////////////////////// */
+/* services and working fow side text styling////////////////////////////////////////////////////////////// */
 
 .content-3 {
     width: 100%;
@@ -148,8 +150,7 @@ nav {
 .services {
     display: flex;
     align-items: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 30px 40px;
 }
 
 .services h2 {
@@ -165,151 +166,422 @@ nav {
     font-size: large;
 }
 
-/* ////////////////////////// */
+/* services section cards ============================================================= */
 
 .content-4 {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 40px;
+    flex-wrap: wrap;
 }
 
-.left-card {
+.left-card,
+.right-card {
     border: 1px solid black;
     border-radius: 45px;
     height: 245px;
-    width: 500px;
+    width: 45%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F3F3F3;
     position: relative;
     overflow: hidden;
+    margin: 10px;
+}
+
+.left-card {
+    background-color: #F3F3F3;
+}
+
+.right-card {
+    background-color: #B9FF66;
 }
 
 .card-content {
-    padding: 50px;
-    /* position: absolute; */
-    max-width: 60%;
-    /* position: relative; */
+    flex: 0 0 50%;
+    padding: 40px;
 }
 
 .card-content h2 {
-    padding: 20px;
-    border: 1px solid black;
-    background-color: #b9ff66;
-    font-size: 3.4vw;
+    display: inline;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 1.86rem;
     font-weight: 500;
-    position: absolute;
-    position: relative;
+    color: black;
 }
 
-h2 span{
+.left-card h2 {
+    background-color: #B9FF66;
+}
 
+.right-card h2 {
+    background-color: #F3F3F3;
 }
 
 .card-btn {
     display: flex;
     align-items: center;
-    /* position: absolute; */
+    gap: 8px;
+    margin-top: 20px;
 }
 
 .card-btn i {
-    font-size: 1.6vw;
+    font-size: 1.6rem;
     padding: 4px;
-    rotate: -40deg;
+    transform: rotate(-40deg);
     color: #B9FF66;
     background-color: black;
     border-radius: 50%;
-    margin-right: 8px;
 }
 
 .card-btn button {
-    font-size: large;
+    font-size: 1rem;
     background-color: transparent;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.1em;
     border: none;
-} 
-
-
-.card-img{
-    width: calc(100% - 60%);
+    cursor: pointer;
 }
 
-.left-img {
-    width: 300;
-    height: 300;
-    background-image: url('./assets/leftcard\ illustration.png');
-    background-size: cover;
+.card-img {
+    flex: 0 0 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-img,
+.right-img {
+    width: 100%;
+    height: 100%;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.left-img {
+    background-image: url('./assets/leftcard\ illustration.png');
+}
+
+.right-img {
+    background-image: url('./assets/rightcard\ illustration.png');
+}
 
 
+/* faq section */
 
+/* main container */
+.content-5 {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-/* ================================= */
-.right-card {
+/* faq on displaying question and answer */
+.on {
+    height: 200px;
+    padding: 20px 45px;
+    background-color: #B9FF66;
     border: 1px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* question main container */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;
+}
+
+.minus-icon,
+.plus-icon {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 5px;
+    background-color: #F3F3F3;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/* qeus no and ques */
+.q-no {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.q-no h1 {
+    font-size: 3rem;
+}
+
+.q-no h2 {
+    font-size: 1.8rem;
+}
+
+.line {
+    width: 100%;
+    height: 1%;
+    background-color: #000000;
+}
+
+/* answer */
+.answer {
+    font-style: normal;
+    padding: 20px 10px;
+    line-height: 1.5rem;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+/* faq off */
+.off {
+    height: 120px;
+    padding: 20px 45px;
+    border: 1px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #F3F3F3;
+}
+
+/* form section */
+.form-section {
+    padding: 10px 80px;
+    margin: 20px auto;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
     border-radius: 45px;
-    height: 245px;
-    width: 500px;
+    overflow: hidden;
+}
+
+form {
+    padding: 0px 10px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.form-head {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+
+.form-input input,
+.form-input textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-input textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-images {
+    left: 290px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.form-img1 {
+    background-image: url('./assets/Mask\ group.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.form-img2,
+.form-img3 {
+    position: absolute;
+}
+
+.form-img2 {
+    background-image: url('./assets/form\ img\ star\ black.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 10%;
+    transform: scale(1.3);
+}
+
+.form-img3 {
+    background-image: url('./assets/form\ img\ star\ green.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    bottom: -15%;
+    right: 50%;
+    transform: scale(0.25);
+}
+
+
+/* fooooter */
+
+.footer {
+    margin-top: 50px;
+}
+
+.container {
+    padding: 30px 35px 0px 35px;
+}
+
+.content_footer {
+    background-color: #191A23;
+    padding: 30px 35px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    color: white;
+}
+
+.footer_nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer_nav .logo img {
+    max-width: 120px;
+    display: inline;
+    background-color: white;
+}
+
+.nav_links {
+    display: flex;
+    gap: 30px;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.footer_details {
+    font-weight: 300;
+    padding: 30px;
+    color: white;
+}
+
+.footer_details button,
+.footer_details p {
+    margin: 10px;
+}
+
+.footer_details button {
+    width: 45%;
     background-color: #B9FF66;
-    position: relative;
-    overflow: hidden;
+    border-radius: 10px;
+    padding: 8px;
+    color: black;
+}
+
+.footer_frm {
+    background-color: #292A32;
+    width: 50%;
+    height: 11rem;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.email_input {
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width: 41%;
+}
+
+.subscribe_btn {
+    padding: 10px 20px;
+    background-color: #B9FF66;
+    color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+.footer_end {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.footer_end hr {
+    border: 1px solid #292A32;
+    margin-bottom: 10px;
+}
+
+.footer_end p {
+    margin: 0;
+    text-align: left;
+}
+
+.footer_end span {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* RESPONSIVE */
 
 /* responsive header & first section*/
-
 @media (max-width: 600px) {
     nav {
         padding: 0 6%;
         height: 60px;
-        border-bottom: 0.6 solid #666;
     }
 
     .nav-part2 h4 {
@@ -332,7 +604,7 @@ h2 span{
     .left {
         padding: 4vw 6vw;
         width: 100%;
-        height: 45%;
+        height: 800px;
     }
 
     .left h1 {
@@ -348,7 +620,8 @@ h2 span{
         margin-bottom: 7vw;
     }
 
-    .content button {
+
+    .left button {
         padding: 3vw 6vw;
         font-size: 3.5vw;
         border-radius: 3px;
@@ -357,6 +630,25 @@ h2 span{
 
     .right {
         width: 100%;
-        height: 55%;
+        height: 1800px;
+        z-index: 1;
+        overflow: hidden
+    }
+
+    /* cards section */
+
+    .left-card,
+    .right-card {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-content {
+        flex: 0 0 100%;
+    }
+
+    .card-content h2 {
+        font-size: 2rem;
     }
 }
